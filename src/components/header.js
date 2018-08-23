@@ -3,12 +3,14 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 // Make a component
-const Header = () => {
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
+  // whenever we use js in jsx we use curly braces
+  // The props.name cane be anything that we want
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Your Profile</Text> 
+      <Text style={textStyle}>{props.headerText}</Text> 
     </View>
   );
 };
