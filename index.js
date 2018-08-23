@@ -1,10 +1,11 @@
 // Import a library to help create a component
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native'; // module unique
+import Header from './src/components/header'; // personal module needs path
 
 // Create a component
 const App = () => (
-    <Text>Keep working after git</Text>
+    <Header/>
 );
 
 // Render it to the device

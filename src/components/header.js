@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 
 // Make a component
 const Header = () => {
-  return <text>Your Profile</text>;
+  return <Text>Your Profile</Text>;
 };
 
 // Make the component available to other parts of the app
