@@ -1,11 +1,15 @@
 // Import a library to help create a component
 import React from 'react';
-import { AppRegistry } from 'react-native'; // module unique
+import { AppRegistry, View } from 'react-native'; // module unique
 import Header from './src/components/header'; // personal module needs path
+import PersonList from './src/components/PersonList';
 
 // Create a component
 const App = () => (
-    <Header headerText={'My Profile'}/>
+    <View>
+      <Header headerText={'My Profile'}/>
+      <PersonList />
+    </View>
 );
 
 // Render it to the device
