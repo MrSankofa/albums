@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import axios from 'axios';
 
 class PersonList extends Component {
 
   componentWillMount() {
-    console.log('ComponentWillMount in PersonList');
-    debugger;
+    axios.get('https://nodecopy.herokuapp.com/api/persons').then(response => console.log(response));
   }
 
   render () {
