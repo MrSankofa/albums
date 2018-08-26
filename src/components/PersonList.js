@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
+import PersonDetail from './PersonDetail';
+
 
 class PersonList extends Component {
   state = { Persons: [] };
@@ -20,14 +22,15 @@ class PersonList extends Component {
   *          could have the same name. It needs to be
   *          unique whenever we log the data*/
   renderPerson() {
+    
     return this.state.Persons.map( person => 
-    <Text key={person._id}>{person.firstname}</Text>
-  );
+      <PersonDetail key={person._id} personProp = {person} />
+    );
   }
 
   render () {
-    console.log(this.state);
     
+    console.log(this.state);
     return (
       <View>
         {this.renderPerson()}
