@@ -8,12 +8,16 @@ class PersonList extends Component {
    axios.get('https://nodecopy.herokuapp.com/api/persons').then( response => this.setState({ Persons: response.data}) );
   }
 
+  renderPerson() {
+    return this.state.Persons.map( person => <Text>{person.firstname}</Text>);
+  }
+
   render () {
     console.log(this.state);
     
     return (
       <View>
-        <Text>Person List!!!!</Text>
+        {this.renderPerson()}
       </View>
     );
   }
